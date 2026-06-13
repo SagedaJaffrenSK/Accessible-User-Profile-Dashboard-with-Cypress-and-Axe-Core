@@ -4,7 +4,7 @@ services:
   app:
     build: .
     ports:
-      - "3002:3000"
+      - "3001:3000"
     container_name: accessible-app
 
   cypress-tests:
@@ -13,7 +13,7 @@ services:
     depends_on:
       - app
     environment:
-      - CYPRESS_baseUrl=http://app:3002
+      - CYPRESS_baseUrl=http://app:3000
     working_dir: /e2e
     volumes:
       - ./:/e2e
