@@ -1,0 +1,20 @@
+version: '3.8'
+
+services:
+  app:
+    build: .
+    ports:
+      - "3002:3000"
+    container_name: accessible-app
+
+  cypress-tests:
+    image: "cypress/included:12.17.2"
+    container_name: cypress-tests
+    depends_on:
+      - app
+    environment:
+      - CYPRESS_baseUrl=http://app:3002
+    working_dir: /e2e
+    volumes:
+      - ./:/e2e
+      - ./cypress/reports:/e2e/cypress/reports

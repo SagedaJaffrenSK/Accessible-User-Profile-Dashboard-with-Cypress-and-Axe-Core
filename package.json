@@ -1,0 +1,25 @@
+{
+  "name": "accessible-profile-dashboard",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "vite --port 3000",
+    "build": "vite build",
+    "preview": "vite preview --port 3000",
+    "start": "vite preview --port 3000"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.14.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.0.0",
+    "vite": "^4.4.0",
+    "cypress": "^12.17.2",
+    "cypress-axe": "^1.4.0",
+    "axe-core": "^4.7.2",
+    "mochawesome": "^7.1.3",
+    "mochawesome-merge": "^4.3.0",
+    "cypress-plugin-tab": "^1.0.5"
+  }
+}
